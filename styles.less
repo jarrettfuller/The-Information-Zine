@@ -187,6 +187,7 @@ h2 {
     width: 100%;
     height: 700px;
     background-color: black;
+        overflow: hidden;
 }
 
 #images {
@@ -195,7 +196,7 @@ h2 {
     width: 90%;
     }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1024px) {
 
     #images img { position: absolute; }
     #images img.gutenberg { left: 300px; top: 128px; width: 600px; }
@@ -212,6 +213,17 @@ h2 {
     #images img.fb { left: 800px; top: 1150px; width: 300px; }
     #images img.liebling { left: 0px; top: -100px; width: 150px; }
     #images img.lee { left: 900px; top: 150px; width: 200px; }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+
+#images img {
+    display: block;
+    width: 45%;
+    padding: 1em;
+    float: left;
+    margin: auto;
+    }
 }
 
 /*-----MOBILE-----*/
