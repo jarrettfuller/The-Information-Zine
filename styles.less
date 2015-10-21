@@ -65,14 +65,6 @@ section {
 #container {
     max-width: 1000px;
 }
-h1 {
-    font-family: plainblacknormal;
-    text-align: center;
-    font-size: 200px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    width: 80%;
-}
 .mlrauto {
     margin-left: auto; margin-right: auto;
 }
@@ -127,6 +119,14 @@ padding-bottom: 50px;
 
 
 /*------QUOTE -------*/
+h1 {
+    font-family: plainblacknormal;
+    text-align: center;
+    font-size: 200px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 80%;
+}
 #quote {
   background: -webkit-linear-gradient(@yellow, white); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(@yellow, white); /* For Opera 11.1 to 12.0 */
@@ -138,14 +138,6 @@ padding-bottom: 50px;
 #four {
     background-color: white;
     overflow: hidden;
-}
-h2 {
-    font-size: 180px;
-    line-height: 180px;
-    font-family: plainblacknormal;
-    color: white;
-    position: absolute;
-    margin-top: 150px;
 }
 .quote-right {
     position:absolute;
@@ -178,6 +170,14 @@ h2 {
     text-align: right;
     padding: @text-padding;
     height: 90vh;
+}
+h2 {
+    font-size: 180px;
+    line-height: 180px;
+    font-family: plainblacknormal;
+    color: white;
+    position: absolute;
+    margin-top: 150px;
 }
 
 
@@ -225,6 +225,11 @@ h2 {
     margin: auto;
     }
 }
+
+/*-----MOBILE-----*/
+
+@import "tablet.less";
+
 
 /*-----MOBILE-----*/
 
