@@ -13,11 +13,12 @@
 }
 @yellow: #edea0b;
 @text-padding: 50px 0px 50px 0px;
+@fonts: 'Cutive Mono', Courier, monospace;
 
 .textarea {
     width: 70%;
     margin: auto;
-    font-family: 'Cutive Mono', Courier, monospace;
+    font-family: @fonts;
     font-size: 18px;
     line-height: 20px;
     margin-bottom: 10px; margin-top: 10px;
@@ -39,7 +40,7 @@
     font-family: "PT Serif", Georgia, Times, serif;
 }
 .paragraph {
-    font-family: 'Cutive Mono', Courier, monospace;
+    font-family: @fonts;
     font-size: 18px;
     line-height: 1.2em;
     margin-bottom: 8px; margin-top: 8px;
@@ -102,6 +103,10 @@ header {
 #one {
 padding-bottom: 50px;
 }
+#one p {
+    .paragraph;
+    margin-left: 10px;
+}
 #two {
     background-color: black;
     color: white;
@@ -111,15 +116,15 @@ padding-bottom: 50px;
     background-color: @yellow;
     margin-top: 0px;
 }
+#four {
+    background-color: white;
+    overflow: hidden;
+}
 #two p, #three p, #four p {
     .textarea;
     .paragraph;
     z-index: 1000;
     position: relative;
-}
-#one p {
-    .paragraph;
-    margin-left: 10px;
 }
 
 
@@ -140,10 +145,7 @@ h1 {
 }
 
 /*------FOUR -------*/
-#four {
-    background-color: white;
-    overflow: hidden;
-}
+
 .quote-right {
     position:absolute;
     right: 0;
@@ -174,17 +176,55 @@ h1 {
     width: auto;
     text-align: center;
     padding: @text-padding;
-    height: 90vh;
+    height: 80vh;
 }
 h2 {
     font-size: 180px;
     line-height: 180px;
     font-family: plainblacknormal;
     color: white;
-    margin-top: 100px;
+    margin-top: 50px;
     width: 90%;
 }
 
+/*------CREDITS -------*/
+.credits {
+    .textbox;
+    background-color: grey;
+}
+
+.zine {
+    width: 50%;
+}
+.zine img {
+    max-width: 100%;
+}
+.description {
+    width: 40%;
+    padding: 50px;
+    padding-top: 25px;
+    .paragraph;
+}
+.description p {
+    .paragraph;
+}
+h4 {
+    font-family: @fonts;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+a {
+    color: black;
+    border-bottom: 1px solid black;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+    color: black;
+    border-bottom: @yellow 1px solid;
+}
 
 /*-----IMAGES-----*/
 
