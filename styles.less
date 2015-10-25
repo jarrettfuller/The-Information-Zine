@@ -154,6 +154,7 @@ h1 {
     overflow: hidden;
     height: 100%;
     padding-top: 300px;
+    z-index: 10;
 }
 .quote-left {
     position:absolute;
@@ -162,6 +163,7 @@ h1 {
     overflow: hidden;
     height: 100%;
     padding-top: 300px;
+    z-index: 10;
 }
 .blockquote {
     .split;
@@ -196,6 +198,7 @@ h2 {
 
 .zine {
     width: 50%;
+    position: relative;
 }
 .zine img {
     max-width: 100%;
@@ -214,9 +217,32 @@ h4 {
     font-weight: 700;
     text-transform: uppercase;
 }
+.link {
+    display: none;
+    position: absolute;
+    padding-left: 15px;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+}
+.zine:hover .link {
+    display: block;
+}
+.link p {
+    .paragraph;
+    color: white;
+    font-size: 200%;
+    padding: 5%;
+    text-decoration: underline;
+    text-underline-position:left;
+}
+
+/*
 a {
-    color: black;
-    border-bottom: 1px solid black;
+    color: white;
+    border-bottom: 2px solid white;
     text-decoration: none;
 }
 a:visited {
@@ -225,12 +251,11 @@ a:visited {
 a:hover {
     color: black;
     border-bottom: @yellow 1px solid;
-}
+} */
 
 /*-----IMAGES-----*/
 
 #collage {
-    width: 100%;
     height: 700px;
     background-color: black;
         overflow: hidden;
@@ -253,16 +278,54 @@ a:hover {
     #images img.publick { left: 950px; top: 150px; width: 150px; }
 
 
-    #images img.arab { left: -150px; top: 1700px; width: 400px; }
+    #images img.arab { left: -150px; top: 1900px; width: 400px; }
     #images img.google { left: 30px; top: 750px; width: 250px;  }
     #images img.huff { left: 300px; top: 375px; width: 250px; }
     #images img.fb { left: 800px; top: 1150px; width: 300px; }
     #images img.liebling { left: 0px; top: -100px; width: 150px; }
     #images img.lee { left: 900px; top: 150px; width: 200px; }
+
+    #images img.internet { left: 700px; top: 1100px; width: 200px; opacity: .3;}
+    #images img.stanford { left: 650px; top: 20px; width: 300px; opacity: .1; }
+    #images img.emotion { left: 35px; top: 420px; width: 250px; opacity: .3; z-index: 0;}
+    #images img.kanye { left: 50px; top: 1750px; width: 175px; opacity: .5;}
+    #images img.brand { left: 700px; top: 2150px; width: 250px; opacity: .2;}
 }
 
 @media screen and (min-width: 481px) and (max-width: 1024px) {
 
+#collage {
+        height: 600px;
+    }
+    #images img { position: absolute; }
+    #images img.gutenberg { left: 100px; top: 150px; width: 450px; }
+    #images img.manutius { left: 0px; top: 250px; width: 90px; z-index: 100;}
+    #images img.book { left: 300px; top: 80px; width: 200px; z-index: 100;}
+    #images img.newspaper { left: 525px; top: 450px; width: 90px; }
+    #images img.courant { left: 70px; top: 30px; width: 110px; }
+    #images img.publick { left: 550px; top: 150px; width: 150px; }
+
+
+    #images img.arab { left: 0px; top: 2600px; width: 300px; }
+    #images img.google { left: -50px; top: 1000px; width: 250px;  }
+    #images img.huff { left: 200px; top: 600px; width: 250px; }
+    #images img.fb { left: 550px; top: 1750px; width: 250px; }
+    #images img.liebling { left: 0px; top: -100px; width: 150px; }
+    #images img.lee { left: 520px; top: 200px; width: 200px; }
+
+    #images img.internet { left: 500px; top: 1400px; width: 200px; opacity: .3;}
+    #images img.stanford { left: 450px; top: 20px; width: 300px; opacity: .1; }
+    #images img.emotion { left: 0px; top: 460px; width: 200px; opacity: .3; z-index: 0;}
+    #images img.kanye { left: 0px; top: 2150px; width: 175px; opacity: .5;}
+    #images img.brand { left: 500px; top: 2750px; width: 250px; opacity: .2;}
+
+}
+
+@media screen and (max-width: 481px) {
+    #collage {
+        overflow: visible;
+        height: inherit;
+    }
 #images img {
     display: block;
     width: 45%;
